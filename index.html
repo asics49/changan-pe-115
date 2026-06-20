@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>高雄市右昌國民小學 115學年度體育班課程計畫評鑑網</title>
+<style>
+  :root {
+    --primary: #1a5276;
+    --accent: #2e86c1;
+    --green: #1e8449;
+    --red: #c0392b;
+    --yellow: #d4ac0d;
+    --bg: #f4f6f9;
+    --card: #ffffff;
+    --border: #d5d8dc;
+    --text: #212529;
+    --muted: #6c757d;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Microsoft JhengHei", "Noto Sans TC", sans-serif; background: var(--bg); color: var(--text); }
+
+  /* Header */
+  header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    color: #fff; padding: 28px 32px 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.25);
+  }
+  header h1 { font-size: 1.55rem; font-weight: 700; letter-spacing: .04em; }
+  header p  { font-size: .9rem; opacity: .85; margin-top: 6px; }
+  .header-meta { display:flex; gap:18px; margin-top:12px; flex-wrap:wrap; }
+  .badge { background:rgba(255,255,255,.18); border:1px solid rgba(255,255,255,.35);
+           border-radius:20px; padding:3px 12px; font-size:.78rem; }
+
+  /* Nav */
+  nav { background:#fff; border-bottom:2px solid var(--border); padding:0 24px;
+        position:sticky; top:0; z-index:100; box-shadow:0 2px 6px rgba(0,0,0,.08); }
+  nav ul { list-style:none; display:flex; gap:0; overflow-x:auto; }
+  nav ul li a { display:block; padding:13px 16px; font-size:.83rem; color:var(--primary);
+                text-decoration:none; white-space:nowrap; border-bottom:3px solid transparent;
+                transition:.2s; }
+  nav ul li a:hover { color:var(--accent); border-bottom-color:var(--accent); }
+
+  /* Layout */
+  .container { max-width:1100px; margin:0 auto; padding:28px 20px 60px; }
+
+  /* Section cards */
+  .section { background:var(--card); border:1px solid var(--border); border-radius:10px;
+             margin-bottom:24px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,.06); }
+  .section-header { background:var(--primary); color:#fff; padding:12px 20px;
+                    display:flex; align-items:center; gap:10px; }
+  .section-header h2 { font-size:1rem; font-weight:700; }
+  .section-header .num { background:rgba(255,255,255,.22); border-radius:50%;
+                         width:28px; height:28px; display:flex; align-items:center;
+                         justify-content:center; font-size:.8rem; font-weight:700; flex-shrink:0; }
+  .section-body { padding:16px 20px; }
+
+  /* Sub-section */
+  .subsection { margin-bottom:14px; }
+  .subsection h3 { font-size:.88rem; color:var(--primary); font-weight:700;
+                   border-left:4px solid var(--accent); padding-left:10px;
+                   margin-bottom:8px; }
+
+  /* File list */
+  .file-list { list-style:none; display:flex; flex-direction:column; gap:5px; }
+  .file-list li { display:flex; align-items:center; gap:8px; }
+  .file-list a { color:var(--accent); text-decoration:none; font-size:.84rem;
+                 display:flex; align-items:center; gap:6px; flex:1; }
+  .file-list a:hover { text-decoration:underline; color:var(--primary); }
+  .file-icon { font-size:1em; flex-shrink:0; }
+
+  /* Status badges */
+  .tag { border-radius:4px; padding:2px 8px; font-size:.72rem; font-weight:700; flex-shrink:0; }
+  .tag-ok    { background:#d5f5e3; color:var(--green); }
+  .tag-miss  { background:#fadbd8; color:var(--red); }
+  .tag-note  { background:#fef9e7; color:var(--yellow); border:1px solid #f4d03f; }
+  .tag-ref   { background:#eaf2ff; color:var(--accent); }
+
+  /* Grid for sub-items */
+  .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  @media(max-width:640px){ .grid-2{grid-template-columns:1fr;} }
+
+  /* External link section */
+  .ext-links { display:flex; gap:12px; flex-wrap:wrap; padding:8px 0; }
+  .ext-btn { display:inline-flex; align-items:center; gap:6px; background:var(--accent);
+             color:#fff; text-decoration:none; border-radius:6px; padding:7px 14px;
+             font-size:.82rem; font-weight:600; transition:.2s; }
+  .ext-btn:hover { background:var(--primary); }
+  .ext-btn.green { background:var(--green); }
+
+  /* Alert */
+  .alert { background:#fef3cd; border:1px solid #ffc107; border-radius:6px;
+           padding:10px 14px; font-size:.82rem; color:#856404; margin-bottom:12px; }
+
+  footer { text-align:center; padding:20px; color:var(--muted); font-size:.78rem;
+           border-top:1px solid var(--border); margin-top:10px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🏃 高雄市右昌國民小學 115學年度體育班課程計畫評鑑網</h1>
+  <p>楠梓區右昌國民小學 ｜ 體育組</p>
+  <div class="header-meta">
+    <span class="badge">🏅 田徑 ／ ⚽ 足球</span>
+    <span class="badge">📚 五年級 ／ 六年級</span>
+    <span class="badge">🗓 115學年度</span>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="#s1">課程發展計畫</a></li>
+    <li><a href="#s2">課程評鑑</a></li>
+    <li><a href="#s3">教材編選</a></li>
+    <li><a href="#s4">節數規劃表</a></li>
+    <li><a href="#s5">課程評量</a></li>
+    <li><a href="#s6">課程進度表</a></li>
+    <li><a href="#s7">課程計畫完整性</a></li>
+    <li><a href="#s8">學校特色</a></li>
+    <li><a href="#s9">114學年度課程計畫</a></li>
+    <li><a href="#s10">訓練計畫</a></li>
+    <li><a href="#s11">參考資料</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+
+  <!-- 舊有連結 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="num">🔗</div>
+      <h2>相關平台連結</h2>
+    </div>
+    <div class="section-body">
+      <div class="ext-links">
+        <a class="ext-btn" href="https://sites.google.com/d/1U5wtjgpyN29ACu1SqvDJPDedTuSmj_J1/p/1bE-YkIFRPIp1pmOgkQc3wLHGB0vmopKt/edit" target="_blank">
+          📄 舊有課程計畫評鑑網（Google Sites）
+        </a>
+        <a class="ext-btn green" href="https://drive.google.com/drive/folders/1lQzcl4bNlFcveLHsALzuWoZRjHas1122" target="_blank">
+          📂 115學年度資料夾（Google 雲端硬碟）
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1. 課程發展計畫及願景 -->
+  <div class="section" id="s1">
+    <div class="section-header">
+      <div class="num">1</div>
+      <h2>右昌國小課程發展計畫及願景</h2>
+    </div>
+    <div class="section-body">
+      <ul class="file-list">
+        <li>
+          <a href="https://drive.google.com/file/d/14kaahbC447Md4YopAAdVmq3gpKtF9VV5/view" target="_blank">
+            <span class="file-icon">📄</span>115學年度體育班課程發展計畫（115.05.30）
+          </a>
+          <span class="tag tag-ok">✅ 已上傳</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 2. 課程評鑑 -->
+  <div class="section" id="s2">
+    <div class="section-header">
+      <div class="num">2</div>
+      <h2>課程評鑑</h2>
+    </div>
+    <div class="section-body">
+
+      <div class="subsection">
+        <h3>課程發展委員會（課發會）會議記錄</h3>
+        <ul class="file-list">
+          <li>
+            <a href="https://drive.google.com/file/d/1tddc7oWQxc1wYTScGMtIeKzhLNGAxkHk/view" target="_blank">
+              <span class="file-icon">📋</span>第三次課程發展委員會會議記錄
+            </a>
+            <span class="tag tag-ok">✅ 已上傳</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>體育班發展委員會會議記錄</h3>
+        <ul class="file-list">
+          <li>
+            <a href="https://drive.google.com/file/d/11PYl943HT-AUegSZD1YOgBwVMm-LG0jD/view" target="_blank">
+              <span class="file-icon">📋</span>114學年度第一次體育班發展委員會會議紀錄
+            </a>
+            <span class="tag tag-ok">✅ 已上傳</span>
+          </li>
+          <li>
+            <a href="https://drive.google.com/file/d/1hVeH_qHZesmrZMKvKtPMnugyH4VDOPPo/view" target="_blank">
+              <span class="file-icon">📋</span>114學年度第三次體育班發展委員會會議紀錄
+            </a>
+            <span class="tag tag-ok">✅ 已上傳</span>
+          </li>
+          <li>
+            <a href="https://drive.google.com/file/d/1cSR_Skz11uPWl6s2SEyFf4I3wWCcqkU2/view" target="_blank">
+              <span class="file-icon">📋</span>114學年度第六次體育班發展委員會會議紀錄
+            </a>
+            <span class="tag tag-ok">✅ 已上傳</span>
+          </li>
+          <li>
+            <a href="https://drive.google.com/file/d/1N4bML321LnjvNgArcfzvvGrJXf8byYnW/view" target="_blank">
+              <span class="file-icon">📋</span>114學年度第七次體育班發展委員會會議紀錄
+            </a>
+            <span class="tag tag-ok">✅ 已上傳</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>體育班課程規劃小組會議紀錄</h3>
+        <ul class="file-list">
+          <li>
+            <a href="https://drive.google.com/file/d/14lwhZPY2WRYdBJi_gY0DBAyisKEZ5xEt/view" target="_blank">
+              <span class="file-icon">📋</span>114學年度第一次體育班課程規劃小組會議紀錄
+            </a>
+            <span class="tag tag-ok">✅ 已上傳</span>
+          </li>
+          <li>
+            <a href="https://drive.google.com/file/d/18Fy9GIUSgzimpma_ZS6JgC8LPdoukENU/view" target="_blank">
+              <span class="file-icon">📋</span>114學年度第二次體育班課程規劃小組會議紀錄
+            </a>
+            <span class="tag tag-ok">✅ 已上傳</span>
+          </li>
+          <li>
+            <a href="https://drive.google.com/file/d/1BN1jpECFXyIZvHfq6RRLXqN-fqNLlydh/view" target="_blank">
+              <span class="file-icon">📋</span>114學年度第三次體育班課程規劃小組會議紀錄
+            </a>
+            <span class="tag tag-ok">✅ 已上傳</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>課程計畫自評表</h3>
+        <div class="alert">⚠️ 尚未上傳 115學年度課程計畫自評表，請補件。</div>
+        <ul class="file-list">
+          <li><span class="file-icon">📄</span><span style="color:var(--muted);font-size:.84rem;">115學年度體育班課程計畫自評表（待補）</span><span class="tag tag-miss">❌ 缺件</span></li>
+        </ul>
+      </div>
+
+      <div class="subsection">
+        <h3>體育專業領域課程評鑑表件</h3>
+        <ul class="file-list">
+          <li>
+            <a href="https://drive.google.com/file/d/1tqXU06vBFd-ea1dqT1lJSXVvjy6zLSmy/view" target="_blank">
+              <span class="file-icon">📋</span>114學年度體育專業領域課程實施評鑑表
+            </a>
+            <span class="tag tag-ok">✅ 已上傳</span>
+          </li>
+          <li>
+            <a href="https://drive.google.com/file/d/1uRAlrz2q9UWXDz9cQwX5gVA6y_Z7q3B6/view" target="_blank">
+              <span class="file-icon">📋</span>115學年度體育班體育專業領域課程設計評鑑表
+            </a>
+            <span class="tag tag-ok">✅ 已上傳</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 3. 教材編選 -->
+  <div class="section" id="s3">
+    <div class="section-header">
+      <div class="num">3</div>
+      <h2>教材編選</h2>
+    </div>
+    <div class="section-body">
+      <ul class="file-list">
+        <li>
+          <a href="https://drive.google.com/file/d/1CxQ_F0C8vgmq9LpTJi58FUljdQXN2mf8/view" target="_blank">
+            <span class="file-icon">📄</span>115學年度教科書版本
+          </a>
+          <span class="tag tag-ok">✅ 已上傳</span>
+        </li>
+        <li>
+          <a href="https://drive.google.com/file/d/1pNmrwTKrgFPD9JZWDNR2WTkWyDmxl1V3/view" target="_blank">
+            <span class="file-icon">📋</span>114學年度第三次課發會會議記錄
+          </a>
+          <span class="tag tag-ok">✅ 已上傳</span>
+        </li>
+      </ul>
+      <div class="subsection" style="margin-top:12px;">
+        <h3>115學年度訓練計畫</h3>
+        <ul class="file-list">
+          <li>
+            <a href="https://drive.google.com/file/d/1fB9WOA4iqW2OFGwJFpLk3fU4yw6IdFLd/view" target="_blank">
+              <span class="file-icon">🏃</span>115學年度年度田徑訓練計畫（PDF）
+            </a>
+            <span class="tag tag-ok">✅ 已上傳</span>
+          </li>
+          <li>
+            <a href="https://drive.google.com/file/d/1w31rMnWYHBZPBM6q_d8RHuqGDWO6KmrG/view" target="_blank">
+              <span class="file-icon">⚽</span>115學年度年度足球訓練計畫（PDF）
+            </a>
+            <span class="tag tag-ok">✅ 已上傳</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. 節數規劃表 -->
+  <div class="section" id="s4">
+    <div class="section-header">
+      <div class="num">4</div>
+      <h2>體育班課程學習節數規劃表</h2>
+    </div>
+    <div class="section-body">
+      <ul class="file-list">
+        <li>
+          <a href="https://drive.google.com/file/d/1q5QzU_A7TFL-gI6sydJ9fgSL8UkAiDnj/view" target="_blank">
+            <span class="file-icon">📊</span>115學年度體育班領域課程節數規劃表（部定）
+          </a>
+          <span class="tag tag-ok">✅ 已上傳</span>
+        </li>
+        <li>
+          <a href="https://drive.google.com/file/d/15EGWKTZ3QWM7mr6kfbx1jJYWEmGAUDx8/view" target="_blank">
+            <span class="file-icon">📊</span>115學年度體育班領域課程節數規劃表（校訂）
+          </a>
+          <span class="tag tag-ok">✅ 已上傳</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 5. 課程評量 -->
+  <div class="section" id="s5">
+    <div class="section-header">
+      <div class="num">5</div>
+      <h2>課程評量</h2>
+    </div>
+    <div class="section-body">
+
+      <div class="subsection">
+        <h3>各專項學期評量方式</h3>
+        <div class="grid-2">
+          <ul class="file-list">
+            <li>
+              <a href="https://drive.google.com/file/d/194nVFb8CHxBMMB2tqtyy0NUineDp9IH6/view" target="_blank">
+                <span class="file-icon">🏃</span>五年級田徑 第一學期
+              </a>
+              <span class="tag tag-ok">✅</span>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/1e5uCdCh1qxR2WUPlHJca4ZJNi2Y7zqSE/view" target="_blank">
+                <span class="file-icon">🏃</span>五年級田徑 第二學期
+              </a>
+              <span class="tag tag-ok">✅</span>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/1DrckRs0Q5NYDKXbRkGySQ999KO_PLTHY/view" target="_blank">
+                <span class="file-icon">🏃</span>六年級田徑 第一學期
+              </a>
+              <span class="tag tag-ok">✅</span>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/1VqvVhGVcH4CbqCLaL1bq_4xXWxludErM/view" target="_blank">
+                <span class="file-icon">🏃</span>六年級田徑 第二學期
+              </a>
+              <span class="tag tag-ok">✅</span>
+            </li>
+          </ul>
+          <ul class="file-list">
+            <li>
+              <a href="https://drive.google.com/file/d/1KWy31m8rvCoEwU2fr8Ysxu1Ke9r6HGtc/view" target="_blank">
+                <span class="file-icon">⚽</span>五年級足球 第一學期
+              </a>
+              <span class="tag tag-ok">✅</span>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/1k0sKh04l9NO8AINvCWVKb-ukN_9QVLpb/view" target="_blank">
+                <span class="file-icon">⚽</span>五年級足球 第二學期
+              </a>
+              <span class="tag tag-ok">✅</span>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/14K9aj2Q2BRsd8nOm1WJhbLIjhycqzvjq/view" target="_blank">
+                <span class="file-icon">⚽</span>六年級足球 第一學期
+              </a>
+              <span class="tag tag-ok">✅</span>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/1SgdQIUijoQKqHLDig6RKgWU-ll0PMch1/view" target="_blank">
+                <span class="file-icon">⚽</span>六年級足球 第二學期
+              </a>
+              <span class="tag tag-ok">✅</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subsection" style="margin-top:14px;">
+        <h3>體育專業領域課程定期考查範圍暨評量方式總表</h3>
+        <div class="grid-2">
+          <ul class="file-list">
+            <li>
+              <a href="https://drive.google.com/file/d/1d-HOcJNdmonooXRoKVXVQA5WlX-2_j1y/view" target="_blank">
+                <span class="file-icon">🏃</span>田徑 五年級
+              </a>
+              <span class="tag tag-ok">✅</span>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/1dMHSBCu76IthZoxtf-1T438-8gLnWYxf/view" target="_blank">
+                <span class="file-icon">🏃</span>田徑 六年級
+              </a>
+              <span class="tag tag-ok">✅</span>
+            </li>
+          </ul>
+          <ul class="file-list">
+            <li>
+              <a href="https://drive.google.com/file/d/1-AAWAPBPW8gV8wcFgO55RRkw47xGZctH/view" target="_blank">
+                <span class="file-icon">⚽</span>足球 五年級
+              </a>
+              <span class="tag tag-ok">✅</span>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/1nIkP_VmDb5Bd5j8lN0gcGSCdTgjOZHwr/view" target="_blank">
+                <span class="file-icon">⚽</span>足球 六年級
+              </a>
+              <span class="tag tag-ok">✅</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 6. 課程進度表 -->
+  <div class="section" id="s6">
+    <div class="section-header">
+      <div class="num">6</div>
+      <h2>115學年度課程進度表（含課程基本資料及評量）</h2>
+    </div>
+    <div class="section-body">
+      <div class="grid-2">
+        <div class="subsection">
+          <h3>🏃 田徑</h3>
+          <ul class="file-list">
+            <li>
+              <a href="https://drive.google.com/file/d/1vC0KP-TqrRd_UkxRvSsb3VZuO00JV1Zz/view" target="_blank">
+                <span class="file-icon">📋</span>五年級 第一學期
+              </a>
+              <span class="tag tag-ok">✅</span>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/1chhZn-NuYBjF8jfMeI6qA3d5ChB5pD7E/view" target="_blank">
+                <span class="file-icon">📋</span>五年級 第二學期
+              </a>
+              <span class="tag tag-ok">✅</span>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/1lhFAhUPyVzGCIXJ5d35D6QGq2jKHE-3a/view" target="_blank">
+                <span class="file-icon">📋</span>六年級 第一學期
+              </a>
+              <span class="tag tag-ok">✅</span>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/15ovCODsCdnHclQsqbgeLAICxJ40FXaaC/view" target="_blank">
+                <span class="file-icon">📋</span>六年級 第二學期
+              </a>
+              <span class="tag tag-ok">✅</span>
+            </li>
+          </ul>
+        </div>
+        <div class="subsection">
+          <h3>⚽ 足球</h3>
+          <ul class="file-list">
+            <li>
+              <a href="https://drive.google.com/file/d/1EhQ59pliEiq9asydX4VGguYb2MwIBbjC/view" target="_blank">
+                <span class="file-icon">📋</span>五年級 第一學期
+              </a>
+              <span class="tag tag-ok">✅</span>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/1V5FYebtPX7nHV4mPn_JtIK3p_1fx-CEB/view" target="_blank">
+                <span class="file-icon">📋</span>五年級 第二學期
+              </a>
+              <span class="tag tag-ok">✅</span>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/1eXIi6Ja4F0DZzXVIRizzxyv61ax7tOJQ/view" target="_blank">
+                <span class="file-icon">📋</span>六年級 第一學期
+              </a>
+              <span class="tag tag-ok">✅</span>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/1KkTvOi_zRS-tu-hyD8ygepNH4MZMb4M8/view" target="_blank">
+                <span class="file-icon">📋</span>六年級 第二學期
+              </a>
+              <span class="tag tag-ok">✅</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. 課程計畫完整性 -->
+  <div class="section" id="s7">
+    <div class="section-header">
+      <div class="num">7</div>
+      <h2>課程計畫完整性</h2>
+    </div>
+    <div class="section-body">
+      <div class="alert">⚠️ 目前僅有 114學年度自評表，請補上 115學年度版本。</div>
+      <ul class="file-list">
+        <li>
+          <a href="https://drive.google.com/file/d/1SzGpKo5I-rqmFwBz24p7pkUnYvBzkPsn/view" target="_blank">
+            <span class="file-icon">📄</span>114學年度體育班課程計畫自評表（參考）
+          </a>
+          <span class="tag tag-note">📌 舊版</span>
+        </li>
+        <li>
+          <span class="file-icon">📄</span>
+          <span style="color:var(--muted);font-size:.84rem;">115學年度體育班課程計畫備查學校自評表（待補）</span>
+          <span class="tag tag-miss">❌ 缺件</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 8. 學校特色 -->
+  <div class="section" id="s8">
+    <div class="section-header">
+      <div class="num">8</div>
+      <h2>學校特色</h2>
+    </div>
+    <div class="section-body">
+      <ul class="file-list">
+        <li>
+          <a href="https://drive.google.com/file/d/1ZHbLu42Y91tjlSME8dUBqf2DpNEdblog/view" target="_blank">
+            <span class="file-icon">🏆</span>111-114年度連四年榮獲體育班績效優良學校
+          </a>
+          <span class="tag tag-ok">✅</span>
+        </li>
+        <li>
+          <a href="https://drive.google.com/file/d/1ZyhEWTXMGJCwNsGr5JhKlTGAwcDaJKuW/view" target="_blank">
+            <span class="file-icon">⚽</span>113年度基層訓練站足球成果報告
+          </a>
+          <span class="tag tag-ok">✅</span>
+        </li>
+        <li>
+          <a href="https://drive.google.com/file/d/19fl-jkpf4DT8cYqCenwE22Zvx1IKbqvY/view" target="_blank">
+            <span class="file-icon">📋</span>113年右昌國小體育班績效優良實施計畫成果報告表
+          </a>
+          <span class="tag tag-ok">✅</span>
+        </li>
+        <li>
+          <a href="https://drive.google.com/file/d/1YVz7GwxEVswpz04C57DmxJIGpafHmijT/view" target="_blank">
+            <span class="file-icon">⚽</span>114年度體育班足球隊系列活動實施計畫
+          </a>
+          <span class="tag tag-ok">✅</span>
+        </li>
+        <li>
+          <a href="https://drive.google.com/file/d/1oILOgRhYVFGo-lhSA3lq-uCexf2egk83/view" target="_blank">
+            <span class="file-icon">📊</span>114年度體育班系列活動體育班招生簡報
+          </a>
+          <span class="tag tag-ok">✅</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 9. 114學年度課程計畫 -->
+  <div class="section" id="s9">
+    <div class="section-header">
+      <div class="num">9</div>
+      <h2>114學年度課程計畫（前一學年參考）</h2>
+    </div>
+    <div class="section-body">
+      <div class="grid-2">
+        <div class="subsection">
+          <h3>🏃 田徑</h3>
+          <ul class="file-list">
+            <li>
+              <a href="https://drive.google.com/file/d/13RkjVnAHg00VcnXkLLNJceXc4AC6hkTx/view" target="_blank">
+                <span class="file-icon">📊</span>五年級 第一學期（xlsx）
+              </a>
+              <span class="tag tag-ref">參考</span>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/1q1f0z9pqa6EhFIYdLQwLKSeQwoYFCEky/view" target="_blank">
+                <span class="file-icon">📊</span>五年級 第二學期（xlsx）
+              </a>
+              <span class="tag tag-ref">參考</span>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/1qH2ny25HEL0-uhRb1Mbm7G7YVyPz4NZ2/view" target="_blank">
+                <span class="file-icon">📊</span>六年級 第一學期（xlsx）
+              </a>
+              <span class="tag tag-ref">參考</span>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/1IbGmJ9BF6pf3-bS2ET0XBV1KOTIeIsSD/view" target="_blank">
+                <span class="file-icon">📊</span>六年級 第二學期（xlsx）
+              </a>
+              <span class="tag tag-ref">參考</span>
+            </li>
+          </ul>
+        </div>
+        <div class="subsection">
+          <h3>⚽ 足球</h3>
+          <ul class="file-list">
+            <li>
+              <a href="https://drive.google.com/file/d/1pifMrsbuWb4wBhYYEx9Epm_tUFDbDHCp/view" target="_blank">
+                <span class="file-icon">📊</span>五年級 第一學期（xlsx）
+              </a>
+              <span class="tag tag-ref">參考</span>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/1wT5btek9XMOJ3NbFy814Pyo-ma_eK4v8/view" target="_blank">
+                <span class="file-icon">📊</span>五年級 第二學期（xlsx）
+              </a>
+              <span class="tag tag-ref">參考</span>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/1BMTuGbWkwDYbZmYz1M9DfBX4DpmbrAU3/view" target="_blank">
+                <span class="file-icon">📊</span>六年級 第一學期（xlsx）
+              </a>
+              <span class="tag tag-ref">參考</span>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/1CFj_1Ij1hl9h0Bt15CNDYCj714IG8ADX/view" target="_blank">
+                <span class="file-icon">📊</span>六年級 第二學期（xlsx）
+              </a>
+              <span class="tag tag-ref">參考</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p style="font-size:.78rem;color:var(--muted);margin-top:10px;">
+        ※ PDF 完整版請見 <a href="https://drive.google.com/drive/folders/1GUrIcMoa5KprBYFddPfsylG5fqoFcLtQ" target="_blank" style="color:var(--accent)">PDF檔資料夾</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- 10. 訓練計畫 -->
+  <div class="section" id="s10">
+    <div class="section-header">
+      <div class="num">10</div>
+      <h2>體育班團隊訓練計畫</h2>
+    </div>
+    <div class="section-body">
+      <div class="subsection">
+        <h3>115學年度</h3>
+        <ul class="file-list">
+          <li>
+            <a href="https://drive.google.com/file/d/1fB9WOA4iqW2OFGwJFpLk3fU4yw6IdFLd/view" target="_blank">
+              <span class="file-icon">🏃</span>115學年度年度田徑訓練計畫（PDF）
+            </a>
+            <span class="tag tag-ok">✅</span>
+          </li>
+          <li>
+            <a href="https://drive.google.com/file/d/1w31rMnWYHBZPBM6q_d8RHuqGDWO6KmrG/view" target="_blank">
+              <span class="file-icon">⚽</span>115學年度年度足球訓練計畫（PDF）
+            </a>
+            <span class="tag tag-ok">✅</span>
+          </li>
+        </ul>
+      </div>
+      <div class="subsection">
+        <h3>113學年度（舊版參考）</h3>
+        <ul class="file-list">
+          <li>
+            <a href="https://drive.google.com/file/d/1ZuRu6HFh-Q5Hjq_EzzHo6fwbwdYTnqoo/view" target="_blank">
+              <span class="file-icon">🏃</span>113學年度年度田徑訓練計畫（PDF）
+            </a>
+            <span class="tag tag-ref">參考</span>
+          </li>
+          <li>
+            <a href="https://drive.google.com/file/d/1CkZGOGVaWVashJfZhnRg7ZXhl4Dy2Zsj/view" target="_blank">
+              <span class="file-icon">⚽</span>113學年度年度足球訓練計畫（PDF）
+            </a>
+            <span class="tag tag-ref">參考</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 11. 參考資料 -->
+  <div class="section" id="s11">
+    <div class="section-header">
+      <div class="num">11</div>
+      <h2>參考資料</h2>
+    </div>
+    <div class="section-body">
+      <ul class="file-list">
+        <li>
+          <a href="https://drive.google.com/file/d/11ZgwDphWd3tNKXbb1AN5GOEV0coES72X/view" target="_blank">
+            <span class="file-icon">📄</span>高雄市115學年度國小體育班課程計畫撰寫說明（會後修正版0323）
+          </a>
+          <span class="tag tag-ref">參考</span>
+        </li>
+        <li>
+          <a href="https://drive.google.com/file/d/1ZJGa1gT42sAanzwwI06XuVZXNo7b6Q_C/view" target="_blank">
+            <span class="file-icon">📅</span>右昌國小115學年度學校行事曆（1150512版）
+          </a>
+          <span class="tag tag-ref">參考</span>
+        </li>
+        <li>
+          <a href="https://drive.google.com/file/d/1HkAuzBVPAj28d6x_gumavjMdn73XZzFd/view" target="_blank">
+            <span class="file-icon">📅</span>高雄市教育局115學年度第1學期行事曆
+          </a>
+          <span class="tag tag-ref">參考</span>
+        </li>
+        <li>
+          <a href="https://drive.google.com/file/d/1CSQsx_QBJ2MyeGylQLc7LNqcUXY5QK6E/view" target="_blank">
+            <span class="file-icon">📅</span>高雄市教育局115學年度第2學期行事曆
+          </a>
+          <span class="tag tag-ref">參考</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<footer>
+  高雄市楠梓區右昌國民小學 ｜ 體育組 ｜ 115學年度體育班課程計畫評鑑網<br>
+  <small>資料存放於 Google 雲端硬碟，網頁由 GitHub Pages 建置</small>
+</footer>
+
+</body>
+</html>
