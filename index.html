@@ -23,9 +23,11 @@
   /* Header */
   header {
     background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-    color: #fff; padding: 28px 32px 20px;
+    color: #fff; padding: 20px 32px 20px;
     box-shadow: 0 3px 10px rgba(0,0,0,.25);
   }
+  .header-inner { display:flex; align-items:center; gap:18px; }
+  .header-logo { width:80px; height:80px; object-fit:contain; flex-shrink:0; filter:drop-shadow(0 2px 4px rgba(0,0,0,.3)); }
   header h1 { font-size: 1.55rem; font-weight: 700; letter-spacing: .04em; }
   header p  { font-size: .9rem; opacity: .85; margin-top: 6px; }
   .header-meta { display:flex; gap:18px; margin-top:12px; flex-wrap:wrap; }
@@ -99,12 +101,17 @@
 <body>
 
 <header>
-  <h1>🏃 高雄市右昌國民小學 115學年度體育班課程計畫評鑑網</h1>
-  <p>楠梓區右昌國民小學 ｜ 體育組</p>
-  <div class="header-meta">
-    <span class="badge">🏅 田徑 ／ ⚽ 足球</span>
-    <span class="badge">📚 五年級 ／ 六年級</span>
-    <span class="badge">🗓 115學年度</span>
+  <div class="header-inner">
+    <img src="logo.png" alt="右昌國小體育班Logo" class="header-logo">
+    <div>
+      <h1>高雄市右昌國民小學 115學年度體育班課程計畫評鑑網</h1>
+      <p>楠梓區右昌國民小學 ｜ 體育組</p>
+      <div class="header-meta">
+        <span class="badge">🏅 田徑 ／ ⚽ 足球</span>
+        <span class="badge">📚 五年級 ／ 六年級</span>
+        <span class="badge">🗓 115學年度</span>
+      </div>
+    </div>
   </div>
 </header>
 
